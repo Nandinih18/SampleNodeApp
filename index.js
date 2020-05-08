@@ -2,10 +2,12 @@ const express = require("express"); //requiring in the express library marked as
 
 const app = express(); //using express library to create a new app
 
-app.get("/", (req, res) => {
+app.get("/", function(req, res) {
   res.send("How are you doing");
 });
 
-app.listen(5000, () => {
-  console.log("Listening on port 5000");
+var server = app.listen(5000, function() {
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log("Listening at http://%s:%s', host, port");
 });

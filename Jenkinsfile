@@ -1,7 +1,12 @@
-node {
-    checkout scm
-
-    def customImage = docker.build("nandinih1806/samplenodeapp")
-
-  
+pipeline {
+   stages {
+  stage('Building image') {
+    steps{
+      script {
+        docker.build("nandinih1806/samplenodeapp") 
+      }
+    }
+  }
+}
+ 
 }

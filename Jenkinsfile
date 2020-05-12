@@ -3,8 +3,9 @@ pipeline {
    stages {
   stage('Building image') {
     steps{
-        docker build . 
-      
+       script(
+        docker.build("nandinih1806/samplenodeapp") 
+          }
     }
   }
 }

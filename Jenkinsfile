@@ -8,13 +8,6 @@ pipeline {
       }
     }
   }
-      stage('Running image'){
-         steps{
-            script{
-               docker.run("nandinih1806/samplenodeapp")
-            }
-         }
-      }
 }
  
 }
